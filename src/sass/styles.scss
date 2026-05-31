@@ -1,0 +1,105 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image: url(/public/bg.png);
+    background-size: cover;
+    background-position: center;
+    // background-repeat: no-repeat;
+}
+
+.money-wrapper {
+
+    // height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        font-size: 50px;
+        background-image: linear-gradient(yellow, orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        filter: drop-shadow(2px 0 black) drop-shadow(-2px 0 black) drop-shadow(0 2px black) drop-shadow(0 -2px black) drop-shadow(1px 1px black) drop-shadow(-1px -1px black) drop-shadow(1px -1px black) drop-shadow(-1px 1px black);
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+
+}
+
+.cat-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    flex-direction: column;
+
+    .cat {
+        width: 150px;
+        cursor: pointer;
+        position: relative;
+
+        &:active {
+            animation: tap .1s infinite;
+        }
+    }
+
+    .display {
+        display: none;
+    }
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .button {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 40px;
+        padding: 10px;
+        color: white;
+        text-shadow: 3px 0 black, -3px 0 black, 0 3px black, 0 -3px black, 2px 2px black, -2px -2px black, 2px -2px black, -2px 2px black;
+        height: fit-content;
+        background-image: linear-gradient(yellow, orange, rgb(183, 119, 0));
+        border: 3px solid black;
+        border-radius: 20px;
+        width: 350px;
+
+        &:disabled {
+            background-image: linear-gradient(rgb(163, 163, 91), rgb(147, 117, 59), rgb(96, 71, 23));
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        &:active {
+            background-image: linear-gradient(rgb(230, 192, 0), rgb(196, 127, 0), rgb(140, 91, 0));
+            box-shadow: 5px 5px 10px black inset;
+
+        }
+    }
+
+
+}
+
+@keyframes tap {
+    0% {
+        width: 150px;
+        height: 165px;
+        top: 0;
+    }
+
+    50% {
+        width: 150px;
+        height: 140px;
+        top: 35px;
+    }
+
+    100% {
+        width: 150px;
+        height: 165px;
+        top: 0;
+    }
+}
